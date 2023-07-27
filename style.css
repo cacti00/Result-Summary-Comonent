@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500&display=swap');
+
+:root {
+    --clr-primary-light-red: hsl(0, 100%, 67%);
+    --clr-primary-orange-yellow: hsl(39, 100%, 56%);
+    --clr-primary-green-teal: hsl(166, 100%, 37%);
+    --clr-primary-cobalt-blue: hsl(234, 85%, 45%);
+
+    /*Gradients*/
+
+    --clr-gradient-light-slate-blue: hsl(252, 100%, 67%);
+    --clr-gradient-light-royal-blue: hsl(241, 81%, 54%);
+    --clr-violent-blue: hsla(256, 72%, 46%, 1);
+    --clr-persian-blue: hsla(241, 72%, 46%, 0);
+
+    /*Neutral*/
+    --clr-neutral-white: hsl(0, 0%, 100%);
+    --clr-neutral-pale-blue: hsl(221, 100%, 96%);
+    --clr-neutral-light-lavender: hsl(241, 100%, 89%);
+    --clr-neutral-dark-gray-blue: hsl(224, 30%, 27%); 
+
+
+    --fs-primary:1.125em;
+
+    --fw-primary:500;
+    --fw-bold:700;
+    --fw-bolder:800;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--clr-neutral-white);
+    line-height: 1.6;
+    font-size: var(--fs-primary);
+    font-weight: var(--fw-primary);
+    font-family: "Hanken Grotesk", sans-serif;
+    min-height: 100vh;
+}
+
+
+
+.container > * {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+
+.container {
+    background-color: hsl(0, 17%, 98%);
+    display: flex;
+    flex-direction: column;
+}
+
+.result-container {
+    background-color: var(--clr-gradient-light-royal-blue);
+    padding: 2em;
+    border-radius: 0 0 1.5em 1.5em;
+   
+}
+.text-center {
+    text-align: center;
+}
+
+.result-header {
+    color: var(--clr-neutral-light-lavender);
+    font-size: 1em;
+    font-weight: var(--fw-bold);
+}
+
+.score-container {
+    background-color: var(--clr-violent-blue);
+    border-radius: 50%;
+    max-width: 50%;
+    padding: 1em 1.7em;
+    margin: auto;
+
+}
+
+.score {
+    color: var(--clr-neutral-white);
+    font-weight: var(--fw-bold);
+    font-size: 3em;
+}
+
+.total-score {
+    font-size: .8em;
+    color: var(--clr-gradient-light-slate-blue);
+    font-weight: var(--fw-bold);
+    margin-top: -0.9em;
+}
+
+.great { 
+    font-size: 1em;
+    color: var(--clr-neutral-white);
+    font-weight: var(--fw-bold);
+    letter-spacing: 0.05em;
+}
+
+.score-description {
+    color: var(--clr-neutral-light-lavender);
+    font-size: .8em;
+    font-weight: var(--fw-primary);
+}
+
+.summary-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+   
+}
+.reaction-container {
+    background-color: hsla(0, 100%, 95%, 0.959);
+}
+.memory-container {
+    background-color: hsla(60, 100%, 95%, 0.925);
+}
+.verbal-container {
+    background-color: hsla(145, 83%, 95%, 0.966);
+}
+.visual-container {
+    background-color: hsla(242, 58%, 91%, 0.541)
+}
+
+
+.wrapper {
+    padding: 0.9em;
+    border-radius: 0.5em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 0.8em;
+}
+
+.clr-red,
+.clr-yellow,
+.clr-verbal,
+.clr-visual {
+    margin-right: auto;
+    font-weight: var(--fw-bold);
+}
+
+.clr-red {
+    color: var(--clr-primary-light-red);
+}
+.clr-yellow {
+    color: var(--clr-primary-orange-yellow);
+}
+.clr-verbal {
+    color: var(--clr-primary-green-teal);
+}
+.clr-visual {
+    color: var(--clr-primary-cobalt-blue);
+}
+
+.clr-black {
+    color: var(--clr-neutral-dark-gray-blue);
+}
+
+
+.summary-score-container {
+    display: flex;
+    font-weight: var(--fw-bold);
+}
+
+.light-grey {
+    color: var(--clr-neutral-light-lavender);
+    color: lightgrey;
+}
+
+
+.continue-btn {
+    width: 100%;
+    background-color: var(--clr-neutral-dark-gray-blue);
+    padding: 1em;
+    border-radius: 50px;
+    border: none;
+    color: var(--clr-neutral-white);
+    font-weight: var(--fw-bold);
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    transition:  0.4s ease-in-out;
+}
+
+
+.continue-btn:hover {
+    background-color: var(--clr-gradient-light-royal-blue);
+}
+
+@media (min-width:40em) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        border-radius: 0 1em 1em 0;
+        border-radius: 1.5em 1.5em 1.5em 1.5em;
+    }
+
+    .container > * {
+        flex-basis: 100%;
+    }
+    .result-container {
+        min-height: 24em;
+        border-radius: 1.5em 1.5em 1.5em 1.5em; 
+    }
+
+    .score-container {
+        padding: 1.9em 3em;
+       
+    }
+
+    .score {
+        margin-left: -0.2em;
+    }
+   
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
